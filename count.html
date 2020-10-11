@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- General -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Count – Simple character counter</title>
+    <meta name="description" content="Easily count characters, words and paragraphs. Use me for your mockups today.">
+
+    <!-- Links -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/count.css" rel="stylesheet">
+    <link href="css/resizer.css" rel="stylesheet">
+
+  </head>
+  <body OnLoad="document.myform.mytextfield.focus();">
+
+    <div id="containerResize" class="hide">
+      <div id="breakpoint" class="resizerText">Viewport</div>
+      <div id="dimensions" class="resizerText">Dimentions</div>
+      <img class="resizer-bg" src="images/bg.png"></img>
+    </div>
+
+
+    <div class="grey-bg">
+      <div class="container">
+        <div class="row switcher">
+          <div class="col-sm-12">
+            <a href="lipsun.html"><div class="col-xs-3 button button-inactive">Lipsun</div></a>
+            <div class="col-xs-3 button button-active">Count</div>
+            <a href="capitalize.html"><div class="col-xs-3 button button-inactive">Capitalize</div></a>
+            <a href="resources.html"><div class="col-xs-3 button button-inactive">Resources</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container main">
+
+      <div class="row header">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1 class="large">Count</h1>
+            <div>
+              <div class="desc">Characters <span id='result__all' class='desc'>0</span></div>
+            </div>
+            <div>
+              <div class="desc">Words <span id='result__words' class="desc">0</span></div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <textarea id='countableArea' class="input"  type="text" style="width:100%;" rows="5"></textarea>
+        </div>
+      </div>
+
+    </div>
+    <div class="container">
+
+      <div class="row footer">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p style="color: #CDCDCD;">Designed and built by <a class="link" target="_blank" href="http://www.calek.co">Luke Caish-Sadlek</a> using <a class="link" target="_blank" href="https://sacha.me/Countable/">Countable.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="note hidden-xs">
+        <div class="key">Arrows keys</div>
+        <p> to switch</p>
+    </div>
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/countable-3.0.1.js"></script>
+    <script src="js/resizer.js"></script>
+    <script src="js/count.js"></script>
+    <script>
+      $(window).keyup(function(e) {
+        var n = e.which || e.keyCode || 0;
+
+        if (n == 39) {
+            console.log('Right Arrow was pressed');
+            window.location.href = 'capitalize.html'
+          } else if (n == 37) {
+            console.log('Left Arrow was pressed');
+            window.location.href = 'lipsun.html'
+          } else {
+            // console.log("An unsupported key was pressed");
+          }
+        });
+    </script>
+
+
+
+  </body>
+</html>

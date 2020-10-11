@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- General -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capatilise – Convert &#38; copy text to Headline case</title>
+    <meta name="description" content="Easily convert any text to Headline case and copy it to your clipboard. Use me for your mockups today.">
+
+    <!-- Links -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/capitalize.css" rel="stylesheet">
+    <link href="css/resizer.css" rel="stylesheet">
+
+  </head>
+  <body id="container" OnLoad="document.myform.mytextfield.focus();">
+
+    <div id="containerResize" class="hide">
+      <div id="breakpoint" class="resizerText">Viewport</div>
+      <div id="dimensions" class="resizerText">Dimentions</div>
+      <img class="resizer-bg" src="images/bg.png"></img>
+    </div>
+
+
+    <div class="grey-bg">
+      <div class="container">
+        <div class="row switcher">
+          <div class="col-sm-12">
+            <a href="lipsun.html"><div class="col-xs-3 button button-inactive">Lipsun</div></a>
+            <a href="count.html"><div class="col-xs-3 button button-inactive">Count</div></a>
+            <div class="col-xs-3 button button-active">Capitalize</div>
+            <a href="resources.html"><div class="col-xs-3 button button-inactive">Resources</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container main">
+
+      <div class="row header">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1 class="large">Capitalize</h1>
+            <div class="desc">Convert to Headline Case</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <form id="tester" action class="col-sm-8 col-sm-offset-2">
+          <input id="untitled" class="input" type="text" placeholder="Paste/type your text here...">
+          <!-- <button type="submit1" class="submit" value="Convert">Convert</button> -->
+          <button id="copyButton" type="submit2" class="submit">Convert & Copy</button>
+          <input id="titled" class="input" type="text">
+          <p id="confirmation" class="cap-note">Text has been copied to your clipboard.</p>
+        </form>
+
+      </div>
+
+    </div>
+    <div class="container">
+
+      <div class="row footer">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p style="color: #CDCDCD;">Designed and built by <a class="link" target="_blank" href="http://www.calek.co">Luke Caish-Sadlek</a> using <a class="link" target="_blank" href="http://individed.com/code/to-title-case/">Convert to Title Case</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="note hidden-xs">
+        <div class="key">Arrows keys</div>
+        <p> to switch</p>
+    </div>
+
+
+
+    <script src="js/jquery-1.2.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/resizer.js"></script>
+    <script src="js/to-title-case.js"></script>
+    <script src="js/capitalize.js"></script>
+    <script>
+    		$(window).keyup(function(e) {
+    			var n = e.which || e.keyCode || 0;
+
+    			if (n == 39) {
+    					console.log('Right Arrow was pressed');
+    					window.location.href = 'resources.html'
+    				} else if (n == 37) {
+    					console.log('Left Arrow was pressed');
+    					window.location.href = 'count.html'
+    				} else {
+    					// console.log("An unsupported key was pressed");
+    				}
+    			});
+    	</script>
+
+
+
+  </body>
+</html>

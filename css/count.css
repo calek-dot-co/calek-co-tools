@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ---------   Colours   -------- */
+/* Black  = #363636;
+   Grey   = #CDCDCD;
+   Orange = #FF5B34; */
+
+   @font-face {
+       font-family: 'brownregular';
+       src: url('../fonts/brown-regular-webfont.woff2') format('woff2'),
+            url('../fonts/brown-regular-webfont.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+   }
+
+
+.title {
+  font-size: 45px;
+  line-height: 42px;
+  color: #FF5B34;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: right;
+  font-family: 'brownregular';
+}
+.desc {
+  font-size: 45px;
+  line-height: 42px;
+  color: #363636;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'brownregular';
+}
+.desc2 {
+  color: #CDCDCD;
+  font-family: 'brownregular';
+
+}
+.input {
+  min-height: 300px;
+  border: 2px solid;
+  border-color: #CDCDCD;
+  border-radius: 4px;
+  font-family: 'brownregular';
+  font-size: 18px;
+  line-height: 30px;
+  color: #363636;
+  padding: 14px 20px;
+  vertical-align: top;
+  margin-left:2px;
+  font-family: 'brownregular';
+  padding-top: 15px;
+}
+.input:focus {
+  border: 2px solid;
+  border-color: #363636;
+  outline: none;
+  font-family: 'brownregular';
+}
+textarea:hover {
+  border-color: #8B8B8B;
+}
+.no-margin {
+  padding-right: 0;
+}
