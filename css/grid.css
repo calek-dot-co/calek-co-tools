@@ -72,12 +72,12 @@ button:active, .switch-active {
   margin-bottom: 10px;
   margin-top: 20px;
 }
-label {
+/* label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 .ontop {
   position: relative;
   z-index: 100;
@@ -117,13 +117,13 @@ label {
 
 
 .one-col {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   height: 100vh;
   padding-left: 15px;
   padding-right: 15px;
 }
 .inner-col {
-  background-color: #F8F8F8;
+  background-color: rgba(55, 55, 55, 0.05);
   height: 100vh;
 }
 /* .one-col:hover {
@@ -133,8 +133,41 @@ label {
   background-color: #FFE7E1;
 } */
 .one-col:hover {
-  background-color: #F8F8F8;
+  background-color: rgba(55, 55, 55, 0.05);
 }
 .one-col:hover > .inner-col{
-  background-color: #EAEAEA;
+  background-color: rgba(55, 55, 55, 0.05);
+}
+
+
+
+
+/* ---------   Baseline Grid   -------- */
+
+.baseline-horizontal {
+  position: absolute;
+  top: 0;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+}
+.baseline-height {
+  height: 100vh;
+}
+
+.baseline-off {
+  background: none;
+}
+.baseline-8px {
+  background-image: url("../images/baseline8.gif");
+  background-repeat: repeat;
+  background-color: none;
+}
+.baseline-16px {
+  background-image: url("../images/baseline16.gif");
+  background-repeat: repeat;
+}
+
+.input-right {
+  margin-right: 20px;
 }

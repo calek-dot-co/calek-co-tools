@@ -39,6 +39,36 @@ function checkWidth() {
 
 
 
+// Make container 'max-width: 1400px '
+
+function checkOff() {
+  var radio1 = document.getElementById('off');
+  if (radio1.checked) {
+    $("#baseline-target").addClass("baseline-off");
+    $("#baseline-target").removeClass("baseline-8px");
+    $("#baseline-target").removeClass("baseline-16px");
+  }
+}
+function check8px() {
+  var radio2 = document.getElementById('8px');
+  if (radio2.checked) {
+    $("#baseline-target").removeClass("baseline-off");
+    $("#baseline-target").addClass("baseline-8px");
+    $("#baseline-target").removeClass("baseline-16px");
+  }
+}
+function check16px() {
+  var radio3 = document.getElementById('16px');
+  if (radio3.checked) {
+    $("#baseline-target").removeClass("baseline-off");
+    $("#baseline-target").removeClass("baseline-8px");
+    $("#baseline-target").addClass("baseline-16px");
+  }
+}
+
+
+
+
 // Load current content width into headline
 
 $( document ).ready(function() {

@@ -12,16 +12,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
-    <!-- <link href="css/resizer.css" rel="stylesheet"> -->
 
   </head>
   <body>
-
-    <!-- <div id="containerResize" class="hide">
-      <div id="breakpoint" class="resizerText">Viewport</div>
-      <div id="dimensions" class="resizerText">Dimentions</div>
-      <img class="resizer-bg" src="images/bg.png"></img>
-    </div> -->
 
 
     <div class="grey-bg ontop">
@@ -37,9 +30,10 @@
       </div>
     </div>
 
-
+    <!-- Main Container -->
     <div id="alt" class="container-fluid max-width main">
 
+      <!-- Introduction Text -->
       <div class="row header ontop">
         <div class="col-sm-8 col-sm-offset-2">
             <h1 class="large">Responsive Grid</h1>
@@ -52,11 +46,14 @@
         </div>
       </div>
 
+      <!-- Prompt -->
       <div class="row ontop">
         <div class="col-sm-8 col-sm-offset-2">
           <p class="button-label">Resize your browser and change the values below</p>
         </div>
       </div>
+
+      <!-- Vertical Grid Settings -->
       <div class="row ontop">
         <div class="col-sm-8 col-sm-offset-2">
           <p class="button-label"><strong>Container Grid</strong></p>
@@ -68,25 +65,29 @@
           </form>
         </div>
       </div>
-      <!-- <div class="row ontop">
+
+      <!-- Horizontal Grid Settings -->
+      <div class="row ontop">
         <div class="col-sm-8 col-sm-offset-2">
-          <p class="button-label"><strong>Rows</strong></p>
-          <form>
+          <p class="button-label"><strong>Baseline</strong></p>
+          <form class="pointer">
             <input type="radio" id="off" name="rows" onclick="checkOff()" checked>
-            <label for="off"> Off</label><br>
-            <input type="radio" id="4px" name="rows" onclick="check4px()">
-            <label for="4px"> 4px</label><br>
+            <label for="off" class="input-right"> Off</label>
             <input type="radio" id="8px" name="rows" onclick="check8px()">
-            <label for="8px"> 8px</label><br>
+            <label for="4px" class="input-right"> 8px</label>
+            <input type="radio" id="16px" name="rows" onclick="check16px()">
+            <label for="8px"> 16px</label>
           </form>
         </div>
-      </div> -->
-      <div class="row ontop">
+      </div>
+
+      <!-- To-do List -->
+      <div class="row ontop" style="opacity: 0.5;">
         <div class="col-sm-8 col-sm-offset-2">
           <p class="button-label"><strong>To-do list</strong></p>
           <form>
             <input type="checkbox" name="to-do1" disabled>
-            <label for="to-do1"> Add 4px/8px baseline grid</label><br>
+            <label for="to-do1"> Align all items to baseline grid</label><br>
             <input type="checkbox" name="to-do2" disabled>
             <label for="to-do2"> Update to Boostrap v5</label><br>
             <input type="checkbox" name="to-do3" disabled>
@@ -96,9 +97,9 @@
           </form>
         </div>
       </div>
-
     </div>
 
+    <!-- Footer -->
     <div id="footer" class="container-fluid max-width ontop">
       <div class="row footer">
         <div class="col-sm-8 col-sm-offset-2">
@@ -107,6 +108,7 @@
       </div>
     </div>
 
+    <!-- Vertical Grid -->
     <div class="grid-vertical">
       <div class="grid-reset">
         <div id="grid-target" class="container-fluid max-width">
@@ -127,7 +129,15 @@
         </div>
       </div>
     </div>
+    <!-- Horizontal Grid -->
+    <div class="baseline-horizontal">
+      <div class="grid-reset">
+        <div id="baseline-target" class="container-fluid baseline-height baseline-off">
+        </div>
+      </div>
+    </div>
 
+    <!-- Prompts -->
     <div class="note hidden-xs">
         <div class="key">Arrows keys</div>
         <p> to switch</p>
@@ -137,7 +147,6 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/grid.js"></script>
-    <!-- <script src="js/resizer.js"></script> -->
     <script>
       $(window).keyup(function(e) {
         var n = e.which || e.keyCode || 0;
