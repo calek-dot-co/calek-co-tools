@@ -33,6 +33,7 @@ function displayWindowDetails() {
 
 windowResizeStopFunction = function(){
   containerResize.classList.remove("show");
+  console.log("Show has been removed");
 }
 
 window.addEventListener('resize', function(event){

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- General -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Count – Simple character counter</title>
+    <meta name="description" content="Easily count characters, words and paragraphs. Use me for your mockups today.">
+
+    <!-- Links -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <!-- <link href="css/resizer.css" rel="stylesheet"> -->
+
+  </head>
+  <body>
+
+    <!-- <div id="containerResize" class="hide">
+      <div id="breakpoint" class="resizerText">Viewport</div>
+      <div id="dimensions" class="resizerText">Dimentions</div>
+      <img class="resizer-bg" src="images/bg.png"></img>
+    </div> -->
+
+
+    <div class="grey-bg ontop">
+      <div class="container-fluid">
+        <div class="row switcher">
+          <div class="col-sm-12">
+            <a href="lipsun.html"><div class="col-xs-3 button button-inactive">Lipsun</div></a>
+            <a href="count.html"><div class="col-xs-3 button button-inactive">Count</div></a>
+            <a href="capitalize.html"><div class="col-xs-3 button button-inactive">Capitalize</div></a>
+            <div class="col-xs-3 button button-active">Grid</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="alt" class="container-fluid max-width main">
+
+      <div class="row header ontop">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1 class="large">Responsive Grid</h1>
+            <div>
+              <div class="desc">Breakpoint: <span id="breakpoint" class='desc'>Null</span></div>
+            </div>
+            <div>
+              <div class="desc">Content width: <span id='browser-width' class="desc">0</span>px</div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row ontop">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p class="button-label">Resize your browser and change the values below</p>
+        </div>
+      </div>
+      <div class="row ontop">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p class="button-label"><strong>Container Grid</strong></p>
+          <form class="pointer">
+            <input type="checkbox" id="fluid" name="fluid" onclick="checkFluid()" checked/>
+            <label for="fluid"> Fluid layout</label><br>
+            <input type="checkbox" id="max-width" name="max-width" onclick="checkWidth()" checked/>
+            <label for="max-width"> max-width: 1400px</label><br>
+          </form>
+        </div>
+      </div>
+      <!-- <div class="row ontop">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p class="button-label"><strong>Rows</strong></p>
+          <form>
+            <input type="radio" id="off" name="rows" onclick="checkOff()" checked>
+            <label for="off"> Off</label><br>
+            <input type="radio" id="4px" name="rows" onclick="check4px()">
+            <label for="4px"> 4px</label><br>
+            <input type="radio" id="8px" name="rows" onclick="check8px()">
+            <label for="8px"> 8px</label><br>
+          </form>
+        </div>
+      </div> -->
+
+    </div>
+
+    <div id="footer" class="container-fluid max-width ontop">
+      <div class="row footer">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p style="color: #CDCDCD;">Designed and built by <a class="link" target="_blank" href="http://www.calek.co">Luke Caish-Sadlek</a> based on <a class="link" target="_blank" href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-vertical">
+      <div class="grid-reset">
+        <div id="grid-target" class="container-fluid max-width">
+          <div class="row highlight-row">
+            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note hidden-xs">
+        <div class="key">Arrows keys</div>
+        <p> to switch</p>
+    </div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/grid.js"></script>
+    <!-- <script src="js/resizer.js"></script> -->
+    <script>
+      $(window).keyup(function(e) {
+        var n = e.which || e.keyCode || 0;
+
+        if (n == 39) {
+            console.log('Right Arrow was pressed');
+            window.location.href = 'lipsun.html'
+          } else if (n == 37) {
+            console.log('Left Arrow was pressed');
+            window.location.href = 'capitalize.html'
+          } else {
+            // console.log("An unsupported key was pressed");
+          }
+        });
+    </script>
+
+
+
+  </body>
+</html>
