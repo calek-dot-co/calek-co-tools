@@ -59,13 +59,13 @@ window.addEventListener('resize', function(event){
 
 function displayWindowDetails() {
   windowWidth = window.innerWidth;
-  if (windowWidth > 1440){
+  if (windowWidth > 1199){
     document.getElementById("breakpoint").innerHTML = 'Large Desktop';
   }
-  else if (windowWidth > 1023){
+  else if (windowWidth > 991){
     document.getElementById("breakpoint").innerHTML = 'Desktop';
   }
-  else if( windowWidth > 768 ){
+  else if( windowWidth > 767 ){
     document.getElementById("breakpoint").innerHTML = 'Tablet';
   }
   else{
