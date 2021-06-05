@@ -120,11 +120,11 @@ li {
   background-color: white;
 }
 .button-inactive {
-  height: 60px;
+  height: 64px;
   text-align: center;
 }
 .button-inactive:hover {
-  height: 60px;
+  height: 64px;
   text-align: center;
   background-color: #F6F6F6;
 }
