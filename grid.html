@@ -10,8 +10,10 @@
 
     <!-- Links -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap5-grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
+    <!-- <link href="css/grid-baseline.css" rel="stylesheet"> -->
 
   </head>
   <body>
@@ -35,75 +37,117 @@
 
       <!-- Introduction Text -->
       <div class="row header ontop">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-target col-sm-8 col-sm-offset-2">
             <h1 class="large">Responsive Grid</h1>
             <div>
               <div class="desc"><span id="breakpoint" class='desc'></span></div>
             </div>
             <div>
-              <div class="desc">Content width <span id='browser-width' class="desc"></span>px</div>
+              <div class="desc">Content Width <span id='browser-width' class="desc"></span>px</div>
             </div>
         </div>
       </div>
 
       <!-- Prompt -->
       <div class="row ontop">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-target col-sm-8 col-sm-offset-2">
           <p class="button-label">Resize your browser and change the values below</p>
         </div>
       </div>
 
       <!-- Vertical Grid Settings -->
       <div class="row ontop">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p class="button-label"><strong>Container Grid</strong></p>
+        <div class="col-target col-sm-8 col-sm-offset-2">
+          <p class="button-label"><strong>Layout Grid</strong></p>
           <form class="pointer">
-            <input type="checkbox" id="fluid" name="fluid" onclick="checkFluid()" checked/>
-            <label for="fluid"> Fluid layout</label><br>
             <input type="checkbox" id="max-width" name="max-width" onclick="checkWidth()" checked/>
-            <label for="max-width"> max-width: 1400px</label><br>
+            <label for="max-width"> max-width: 1600px</label><br>
+
+            <input type="radio" id="fluid" name="fluid" onclick="checkFluid()" checked/>
+            <label for="fluid" class="input-right"> Fluid layout</label>
+            <input type="radio" id="fixed" name="fluid" onclick="checkFixed()"/>
+            <label for="fluid"> Fixed layout</label><br>
+
+            <input type="radio" id="0px" name="gutter" onclick="check0px()">
+            <label for="0px" class="input-right"> Off</label>
+            <input type="radio" id="15px" name="gutter" onclick="check15px()" checked>
+            <label for="15px" class="input-right"> 15px margin</label>
+            <input type="radio" id="20px" name="gutter" onclick="check20px()">
+            <label for="20px" class="input-right"> 20px margin</label>
+            <input type="radio" id="30px" name="gutter" onclick="check30px()">
+            <label for="30px"> 30px margin</label>
           </form>
         </div>
       </div>
 
-      <!-- Horizontal Grid Settings -->
-      <div class="row ontop">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p class="button-label"><strong>Baseline</strong></p>
+
+      <!-- Baseline Settings -->
+      <!-- <div class="row ontop">
+        <div class="col-target col-sm-8 col-sm-offset-2">
+          <p class="button-label"><strong>Baseline Grid</strong></p>
           <form class="pointer">
             <input type="radio" id="off" name="rows" onclick="checkOff()" checked>
             <label for="off" class="input-right"> Off</label>
-            <input type="radio" id="8px" name="rows" onclick="check8px()">
+            <input type="radio" id="8px" name="rows" onclick="check8px()" >
             <label for="4px" class="input-right"> 8px</label>
             <input type="radio" id="16px" name="rows" onclick="check16px()">
             <label for="8px"> 16px</label>
           </form>
         </div>
-      </div>
+      </div> -->
 
-      <!-- To-do List -->
-      <div class="row ontop" style="opacity: 0.5;">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p class="button-label"><strong>To-do list</strong></p>
-          <form>
-            <input type="checkbox" name="to-do1" disabled>
-            <label for="to-do1"> Align all items to baseline grid</label><br>
-            <input type="checkbox" name="to-do2" disabled>
-            <label for="to-do2"> Update to Boostrap v5</label><br>
-            <input type="checkbox" name="to-do3" disabled>
-            <label for="to-do3"> Editable gutter and max-width</label><br>
-            <input type="checkbox" name="to-do4" disabled>
-            <label for="to-do4"> Add simple playground showing nested columns</label><br>
+      <!-- Playground Settings -->
+      <!-- <div class="row ontop">
+        <div class="col-target col-sm-8 col-sm-offset-2">
+          <p class="button-label"><strong>Layout Grid</strong></p>
+          <form class="pointer">
+            <input type="radio" id="playoff" name="playground" onclick="playOff()" checked/>
+            <label for="playground" class="input-right"> Off</label>
+            <input type="radio" id="playon" name="playground" onclick="playOn()"/>
+            <label for="playground"> On</label><br>
           </form>
         </div>
-      </div>
+      </div> -->
+
+      <!-- Playground Layout -->
+      <!-- <div id="playground" class="row playground-hidden">
+        <div class="col col-sm-12 playStyle purple">
+          <div class="col purple-inner">12 columns</div>
+        </div>
+
+        <div class="col col-sm-6 playStyle orange">
+          <div class="col orange-inner">6 columns</div>
+        </div>
+        <div class="col col-sm-6 playStyle blue">
+          <div class="col blue-inner">6 columns</div>
+        </div>
+
+        <div class="col col-sm-4 playStyle purple">
+          <div class="col purple-inner">4 columns</div>
+        </div>
+        <div class="col col-sm-4 playStyle orange">
+          <div class="col orange-inner">4 columns</div>
+        </div>
+        <div class="col col-sm-4 playStyle purple">
+          <div class="col purple-inner">4 columns</div>
+        </div>
+
+        <div class="col col-sm-2 playStyle purple">
+          <div class="col purple-inner">2 columns</div>
+        </div>
+        <div class="col col-sm-10 playStyle blue">
+          <div class="col blue-inner">10 columns</div>
+        </div>
+      </div> -->
+
+
     </div>
 
     <!-- Footer -->
     <div id="footer" class="container-fluid max-width ontop">
       <div class="row footer">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p style="color: #CDCDCD;">Designed and built by <a class="link" target="_blank" href="http://www.calek.co">Luke Caish-Sadlek</a> based on <a class="link" target="_blank" href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4</a></p>
+        <div class="col-target col-sm-8 col-sm-offset-2">
+          <p style="color: #CDCDCD;">Designed and built by <a class="link" target="_blank" href="http://www.calek.co">Luke Caish-Sadlek</a> based on <a class="link" target="_blank" href="https://getbootstrap.com/docs/5.0/layout/breakpoints/">Bootstrap 5</a></p>
         </div>
       </div>
     </div>
@@ -113,18 +157,18 @@
       <div class="grid-reset">
         <div id="grid-target" class="container-fluid max-width">
           <div class="row highlight-row">
-            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-xs-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
-            <div class="col-sm-1 one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
+            <div class="col-target col one-col"><div class="col inner-col"></div></div>
           </div>
         </div>
       </div>

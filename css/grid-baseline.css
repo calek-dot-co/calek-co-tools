@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ---------   Baseline Overrides on main.css & grid.css   -------- */
+
+.header {
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.large, .desc {
+  font-size: 46px;
+  line-height: 48px;
+  margin-top: 16px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+h1, .desc {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.button-label {
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 16px
+}
+
+label {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 16px
+}

@@ -72,6 +72,9 @@ button:active, .switch-active {
   margin-bottom: 10px;
   margin-top: 20px;
 }
+label {
+  font-weight: 400;
+}
 /* label {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -101,12 +104,16 @@ button:active, .switch-active {
 .grid-reset {
   position: relative;
 }
+.row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .highlight-row {
   border-left: dashed 1px #FF5B34;
   border-right: dashed 1px #FF5B34;
 }
 .max-width {
-  max-width: 1400px;
+  max-width: 1600px;
 }
 .main {
   pointer-events: none
@@ -142,6 +149,8 @@ button:active, .switch-active {
 
 
 
+
+
 /* ---------   Baseline Grid   -------- */
 
 .baseline-horizontal {
@@ -162,12 +171,84 @@ button:active, .switch-active {
   background-image: url("../images/baseline8.gif");
   background-repeat: repeat;
   background-color: none;
+  background-size: 16px 16px;
 }
 .baseline-16px {
   background-image: url("../images/baseline16.gif");
   background-repeat: repeat;
+  background-size: 16px 16px;
 }
 
 .input-right {
   margin-right: 20px;
+}
+
+
+
+
+/* ---------   Playground   -------- */
+
+.playground-shown {
+  display: block;
+}
+.playground-hidden {
+  display: none;
+}
+
+#playground {
+  margin-top: 20px;
+}
+
+.playStyle {
+  text-align: center;
+  color: white;
+  min-height: 100px;
+  margin-bottom: 15px;
+}
+.purple {
+  background-color: rgba(171, 10, 252, .25);
+}
+.purple-inner {
+  background-color: #AB0AFC;
+  min-height: 100px;
+}
+.orange {
+  background-color: rgba(255, 91, 52, .25);
+}
+.orange-inner {
+  background-color: #FF5B34;
+  min-height: 100px;
+}
+.blue {
+  background-color: rgba(1, 99, 222, .25);
+}
+.blue-inner {
+  background-color: #01C7E9;
+  min-height: 100px;
+}
+
+
+/* ---------   Margin   -------- */
+
+.margin0px {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.margin15px {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.margin20px {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.margin30px {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.row {
+  padding-left: 0px;
+  padding-right: 0px;
 }
