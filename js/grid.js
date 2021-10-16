@@ -1,44 +1,83 @@
 
 // Make container 'Fluid'
 
-function checkFluid() {
-  var radio4 = document.getElementById('fluid');
-  if (radio4.checked) {
-    $("#grid-target").addClass("container-fluid");
-    $("#grid-target").removeClass("container");
-    $("#alt").addClass("container-fluid");
-    $("#alt").removeClass("container");
-    $("#footer").addClass("container-fluid");
-    $("#footer").removeClass("container");
+// function checkFluid() {
+//   var radio4 = document.getElementById('fluid');
+//   if (radio4.checked) {
+//     $("#grid-target").addClass("container-fluid");
+//     $("#grid-target").removeClass("container");
+//     $("#alt").addClass("container-fluid");
+//     $("#alt").removeClass("container");
+//     $("#footer").addClass("container-fluid");
+//     $("#footer").removeClass("container");
+//   }
+// }
+// function checkFixed() {
+//   var radio3 = document.getElementById('fixed');
+//   if (radio3.checked) {
+//     $("#grid-target").addClass("container");
+//     $("#grid-target").removeClass("container-fluid");
+//     $("#alt").addClass("container");
+//     $("#alt").removeClass("container-fluid");
+//     $("#footer").addClass("container");
+//     $("#footer").removeClass("container-fluid");
+//   }
+// }
+//
+
+
+
+// Make container 'max-width: ???px'
+
+
+window.onload = function() {
+  document.getElementById("alt").style.maxWidth = "1600px";
+  document.getElementById("footer").style.maxWidth = "1600px";
+  document.getElementById("grid-target").style.maxWidth = "1600px";
+};
+
+function jswidth1200() {
+  var radio10 = document.getElementById('width1200');
+  if (radio10.checked) {
+      document.getElementById("alt").style.maxWidth = "1200px";
+      document.getElementById("footer").style.maxWidth = "1200px";
+      document.getElementById("grid-target").style.maxWidth = "1200px";
   }
 }
-function checkFixed() {
-  var radio3 = document.getElementById('fixed');
-  if (radio3.checked) {
-    $("#grid-target").addClass("container");
-    $("#grid-target").removeClass("container-fluid");
-    $("#alt").addClass("container");
-    $("#alt").removeClass("container-fluid");
-    $("#footer").addClass("container");
-    $("#footer").removeClass("container-fluid");
+
+function jswidth1440() {
+  var radio11 = document.getElementById('width1440');
+  if (radio11.checked) {
+    document.getElementById("alt").style.maxWidth = "1440px";
+    document.getElementById("footer").style.maxWidth = "1440px";
+    document.getElementById("grid-target").style.maxWidth = "1440px";
   }
 }
 
+function jswidth1600() {
+  var radio12 = document.getElementById('width1600');
+  if (radio12.checked) {
+    document.getElementById("alt").style.maxWidth = "1600px";
+    document.getElementById("footer").style.maxWidth = "1600px";
+    document.getElementById("grid-target").style.maxWidth = "1600px";
+  }
+}
 
+function jswidth2000() {
+  var radio13 = document.getElementById('width2000');
+  if (radio13.checked) {
+    document.getElementById("alt").style.maxWidth = "2000px";
+    document.getElementById("footer").style.maxWidth = "2000px";
+    document.getElementById("grid-target").style.maxWidth = "2000px";
+  }
+}
 
-
-// Make container 'max-width: 1600px '
-
-function checkWidth() {
-  var chkBox2 = document.getElementById('max-width');
-  if (chkBox2.checked) {
-    $("#grid-target").addClass("max-width");
-    $("#alt").addClass("max-width");
-    $("#footer").addClass("max-width");
-  } else {
-    $("#grid-target").removeClass("max-width");
-    $("#alt").removeClass("max-width");
-    $("#footer").removeClass("max-width");
+function w100() {
+  var radio13 = document.getElementById('100');
+  if (radio13.checked) {
+    document.getElementById("alt").style.maxWidth = "4000px";
+    document.getElementById("footer").style.maxWidth = "4000px";
+    document.getElementById("grid-target").style.maxWidth = "4000px";
   }
 }
 
@@ -124,6 +163,8 @@ function playOff() {
     $("#playground").addClass("playground-hidden");
     $("#playground").removeClass("playground-shown");
     console.log("Hidden added");
+    $(".note").addClass("playground-shown");
+    $(".note").removeClass("playground-hidden");
   }
 
 }
@@ -132,6 +173,8 @@ function playOn() {
   if (chkBox6.checked) {
     $("#playground").addClass("playground-shown");
     $("#playground").removeClass("playground-hidden");
+    $(".note").addClass("playground-hidden");
+    $(".note").removeClass("playground-shown");
   }
   console.log("Shown added");
 }
@@ -161,8 +204,11 @@ window.addEventListener('resize', function(event){
 
 function displayWindowDetails() {
   windowWidth = window.innerWidth;
- if (windowWidth > 1414){
-    document.getElementById("breakpoint").innerHTML = 'Designers Monitor';
+ if (windowWidth > 2000){
+    document.getElementById("breakpoint").innerHTML = 'Designer\'s Monitor';
+  }
+  else if (windowWidth > 1600){
+    document.getElementById("breakpoint").innerHTML = 'Extra Large Desktop';
   }
   else if (windowWidth > 1214){
     document.getElementById("breakpoint").innerHTML = 'Large Desktop';

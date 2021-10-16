@@ -162,6 +162,20 @@ li {
   -webkit-user-select: none; /* Chrome, Safari, and Opera */
   -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
+.noteEnterToConvert {
+  z-index: 100;
+  position: fixed;
+  right: -25px;
+  top: 49%;
+  transform: rotate(90deg);
+  width: 195px;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+  color: #CDCDCD;
+}
 /*.key {
   border-style: solid;
   border-width: 2px;
