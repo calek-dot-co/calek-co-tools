@@ -164,7 +164,7 @@ label {
   height: 100vh;
 }
 .baseline-height {
-  height: 100vh;
+  height: 200vh;
 }
 
 .baseline-off {
@@ -206,16 +206,13 @@ label {
 .playStyle {
   text-align: center;
   color: white;
-  min-height: 100px;
-  margin-bottom: 45px;
+  min-height: 96px;
+  margin-bottom: 48px;
   line-height: 1;
 }
 .playStyle-gapless {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
-/* .playStyle:hover {
-  opacity: .75;
-} */
 .purple {
   background-color: rgba(171, 10, 252, .25);
 }

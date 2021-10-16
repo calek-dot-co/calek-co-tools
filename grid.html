@@ -14,7 +14,7 @@
     <link href="css/bootstrap5-grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
-    <!-- <link href="css/grid-baseline.css" rel="stylesheet"> -->
+    <link href="css/grid-baseline.css" rel="stylesheet">
 
   </head>
   <body>
@@ -67,7 +67,6 @@
             <label for="fluid" class="input-right"> Fluid layout</label>
             <input type="radio" id="fixed" name="fluid" onclick="checkFixed()"/>
             <label for="fixed" class="spacer"> Fixed layout</label><br> -->
-
             <input type="radio" id="100" name="max-width" onclick="w100()"/>
             <label for="100" class="input-right"> Off</label>
             <input type="radio" id="width1200" name="max-width" onclick="jswidth1200()" />
@@ -78,8 +77,14 @@
             <label for="width1600" class="input-right"> 1600px</label>
             <input type="radio" id="width2000" name="max-width" onclick="jswidth2000()"/>
             <label for="width2000" class="spacer"> 2000px</label><br>
+          </form>
+        </div>
+      </div>
 
-            <p class="button-label"><strong>Margin</strong></p>
+      <div class="row ontop">
+        <div class="col-target col-xs-12 col-sm-8 col-sm-offset-2">
+          <p class="button-label"><strong>Margin</strong></p>
+          <form class="pointer">
             <input type="radio" id="0px" name="gutter" onclick="check0px()">
             <label for="0px" class="input-right"> Off</label>
             <input type="radio" id="15px" name="gutter" onclick="check15px()" checked>
@@ -87,21 +92,13 @@
             <input type="radio" id="20px" name="gutter" onclick="check20px()">
             <label for="20px" class="input-right"> 20px margin</label>
             <input type="radio" id="30px" name="gutter" onclick="check30px()">
-            <label for="30px"  class="spacer"> 30px margin</label>
-
-            <p class="button-label"><strong>Example Layouts</strong></p>
-            <input type="radio" id="playoff" name="playground" onclick="playOff()" checked/>
-            <label for="playoff" class="input-right"> Off</label>
-            <input type="radio" id="playon" name="playground" onclick="playOn()"/>
-            <label for="playon"> On</label><br>
+            <label for="30px" class="spacer"> 30px margin</label>
           </form>
         </div>
       </div>
 
-
-      <!-- Baseline Settings -->
-      <!-- <div class="row ontop">
-        <div class="col-target col-sm-8 col-sm-offset-2">
+      <div class="row ontop">
+        <div class="col-target col-xs-12 col-sm-8 col-sm-offset-2">
           <p class="button-label"><strong>Baseline Grid</strong></p>
           <form class="pointer">
             <input type="radio" id="off" name="rows" onclick="checkOff()" checked>
@@ -109,10 +106,22 @@
             <input type="radio" id="8px" name="rows" onclick="check8px()">
             <label for="8px" class="input-right"> 8px</label>
             <input type="radio" id="16px" name="rows" onclick="check16px()">
-            <label for="16px"> 16px</label>
+            <label for="16px" class="spacer"> 16px</label>
           </form>
         </div>
-      </div> -->
+      </div>
+
+      <div class="row ontop">
+        <div class="col-target col-xs-12 col-sm-8 col-sm-offset-2">
+          <p class="button-label"><strong>Example Layouts</strong></p>
+          <form class="pointer">
+            <input type="radio" id="playoff" name="playground" onclick="playOff()" checked/>
+            <label for="playoff" class="input-right"> Off</label>
+            <input type="radio" id="playon" name="playground" onclick="playOn()"/>
+            <label for="playon"> On</label><br>
+          </form>
+        </div>
+      </div>
 
 
       <!-- Playground Layout -->
@@ -215,10 +224,10 @@
     </div>
 
     <!-- Prompts -->
-    <div class="note hidden-xs">
+    <!-- <div class="note hidden-xs">
         <div class="key">Arrows keys</div>
         <p> to switch</p>
-    </div>
+    </div> -->
 
 
     <script src="js/jquery-3.5.1.min.js"></script>

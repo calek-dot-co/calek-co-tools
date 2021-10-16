@@ -3,36 +3,56 @@
 
 /* ---------   Baseline Overrides on main.css & grid.css   -------- */
 
-.header {
-  padding-top: 64px;
-  padding-bottom: 32px;
-}
-
 .large, .desc {
   font-size: 46px;
   line-height: 48px;
-  margin-top: 16px;
   padding-top: 0px;
   padding-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-h1, .desc {
+.desc {
   margin-bottom: 0px;
   padding-bottom: 0px;
+  margin-top: 16px;
 }
+
+
 
 .button-label {
   margin-bottom: 16px;
   margin-top: 32px;
 }
 
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 p {
   font-size: 16px;
-  line-height: 16px
+  line-height: 16px;
+  margin-top: 24px;
+}
+
+input[type="radio"] + *::before {
+  margin-top: 1px;
 }
 
 label {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 16px
+}
+.spacer {
+    margin-bottom: 8px;
+}
+
+#playground {
+  margin-top: 32px;
+}
+
+.playStyle, .purple-inner, .orange-inner, .orange-inner {
+  min-height: 96px;
 }
