@@ -122,7 +122,7 @@ label {
   border-right: dashed 1px #FF5B34;
 }
 .main {
-  pointer-events: none
+  pointer-events: none;
 }
 .pointer {
   pointer-events: auto;
